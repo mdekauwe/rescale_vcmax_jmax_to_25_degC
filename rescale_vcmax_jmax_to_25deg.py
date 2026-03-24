@@ -59,12 +59,13 @@ def peaked_arrh(k25, Ea, Tk, deltaS, Hd, RGAS):
     return arg1 * arg2 / arg3
 
 
+
 # Constants
 RGAS = 8.314  # J mol-1 K-1
 
 # Activation energies (J/mol)
-Eav = 65300.0  # Vcmax
-Eaj = 43790.0  # Jmax
+Eav = 30000.0
+Eaj = 60000.0
 
 # Deactivation energies (J/mol)
 Hdv = 200000.0
@@ -89,7 +90,7 @@ Vcmax25 = arrh(VcmaxT, Eav, Tleaf_K, RGAS)
 Jmax25 = arrh(JmaxT, Eaj, Tleaf_K, RGAS)
 
 # Peaked version accounts for the high-temperature decline in Vcmax,
-# better for leaf temperatures >30 degC, but needs extra parameters 
+# better for leaf temperatures >30 degC, but needs extra parameters
 Vcmax25_peak = peaked_arrh(VcmaxT, Eav, Tleaf_K, Svv, Hdv,  RGAS)
 Jmax25_peak = peaked_arrh(JmaxT, Eaj, Tleaf_K, Svj, Hdj,  RGAS)
 
