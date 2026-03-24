@@ -1,1 +1,1 @@
-# recale_vcmax
+# rescale_vcmax_and_jmax_to_25_deg
